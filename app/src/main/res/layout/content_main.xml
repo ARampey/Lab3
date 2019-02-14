@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:elevation="0dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="guessButtonClicked"
+        android:text="GUESS"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/userInput"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/userInput"
+        tools:text="Guess" />
+
+    <TextView
+        android:id="@+id/introTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Try to guess the secret word, one letter at a time." />
+
+    <TextView
+        android:id="@+id/scrambledWordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text="Scrambled word will appear here."
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introTextView" />
+
+    <TextView
+        android:id="@+id/correctGuessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text="Guessed letters:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrambledWordTextView" />
+
+    <TextView
+        android:id="@+id/incorrectCounterView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text="Incorrect guesses: "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctGuessTextView" />
+
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/guessButton"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incorrectCounterView" />
+
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="135dp" />
+
+</android.support.constraint.ConstraintLayout>
