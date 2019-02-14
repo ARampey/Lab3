@@ -81,29 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
         correctGuess = "";
 
-
-       // resetActivity();
-        // private boolean gameOver = false;
     }
 
-
-
-   // public void resetActivity() {
-    //    gameOver = false;
-   //     int incorrectCounter = 0;
-
-
-
-
-
-
-
-   // }
-
-
-
-
-// should be complete? test
 
   /*  public void chooseWord() {
 
@@ -123,9 +102,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void guessButtonClicked(View v) {
 
-    //    if (gameOver == true) {
-    //       resetActivity();
-     //   }
 
     TextView userInput = (TextView) findViewById(R.id.userInput);
     TextView correctGuessView = (TextView) findViewById(R.id.correctGuessTextView);
